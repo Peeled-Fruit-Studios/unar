@@ -1,4 +1,6 @@
-# unar
+# Unar (aka UNix ARchiver)
+
+*The speedy, drop-in replacement for llvm-ar and GNU ar*
 
 [![Crates.io](https://img.shields.io/crates/v/unar.svg)](https://crates.io/crates/unar)
 [![Docs.rs](https://docs.rs/unar/badge.svg)](https://docs.rs/unar)
