@@ -1,0 +1,10 @@
+[package]
+name = "unar"
+version = "0.1.0"
+authors = ["PFS (Peeled Fruit Studios)"]
+edition = "2018"
+description = "Cross platform implementation of the unix ar utility"
+repository = "https://github.com/Peeled-Fruit-Studios/unar"
+license = "MIT"
+
+[dependencies]
