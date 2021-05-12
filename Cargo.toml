@@ -8,3 +8,5 @@ repository = "https://github.com/Peeled-Fruit-Studios/unar"
 license = "MIT"
 
 [dependencies]
+ar = "0.8.0"
+structopt = "0.3.21"
