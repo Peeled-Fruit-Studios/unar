@@ -1,6 +1,6 @@
 [package]
 name = "unar"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["PFS (Peeled Fruit Studios)"]
 edition = "2018"
 description = "Cross platform implementation of the unix ar utility"
@@ -10,3 +10,6 @@ license = "MIT"
 [dependencies]
 ar = "0.8.0"
 structopt = "0.3.21"
+
+[profile.release]
+panic = 'abort'
