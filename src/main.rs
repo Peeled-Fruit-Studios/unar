@@ -4,7 +4,7 @@ use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 /// The UNix ARchiver, a simple archive utility compatible with MSVC/GNU/LLVM
-struct cli {
+struct UnarCli {
     /// Format of generated archive
     #[structopt(short = "f", long = "format", default_value = "gnu")]
     format: String,
@@ -19,7 +19,7 @@ struct cli {
 }
 
 fn main() {
-    let opt = cli::from_args();
+    let opt = UnarCli::from_args();
 
     // Check to make sure that the format is one of the following
     // bsd (used by *BSD and darwin), gnu (used by linux and windows) and common (used in .deb packages)
