@@ -86,7 +86,7 @@ jobs:
           "$GCC_PREFIX"strip $BINARY_NAME
 
           ########## create tar.gz ##########
-          RELEASE_NAME=unar-"${{ matrix.job.os-name }}"-"${{ matrix.job.architecture }}"
+          RELEASE_NAME=unar-"${GITHUB_REF/refs\/tags\//}"-"${{ matrix.job.os-name }}"-"${{ matrix.job.architecture }}"
           tar -cvf $RELEASE_NAME.tar $BINARY_NAME
           gzip $RELEASE_NAME.tar
 
@@ -105,17 +105,17 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-#publish-cargo:
-#    name: Publishing to Cargo
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#      - uses: actions-rs/toolchain@v1
-#        with:
-#          toolchain: stable
-#          profile: minimal
-#          override: true
-#      - uses: actions-rs/cargo@v1
-#        with:
-#          command: publish
-#          args: --token "${{ secrets.CARGO_API_KEY }}"
+publish-cargo:
+    name: Publishing to Cargo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+      - uses: actions-rs/cargo@v1
+        with:
+          command: publish
+          args: --token "${{ secrets.CARGO_API_KEY }}"

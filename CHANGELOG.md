@@ -14,4 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Changed
 - Changed the panic profile on release builds to abort (looks more professional).
 
+### [0.1.2] - 2021-05-15
+#### Added
+- Completly rewrote the Continuous Deployment code
+- Redid the Github CI.
+
+*NOTE: This release dosen't add any new features for the user as for the code isn't changed.*
+
 ## [Unreleased]
