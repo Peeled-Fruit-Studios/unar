@@ -101,8 +101,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            target/"${{ matrix.job.target }}"/release/unar-*.tar.gz
-            target/"${{ matrix.job.target }}"/release/unar-*.sha256
+            target/${{ matrix.job.target }}/release/unar-*.tar.gz
+            target/${{ matrix.job.target }}/release/unar-*.sha256
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
