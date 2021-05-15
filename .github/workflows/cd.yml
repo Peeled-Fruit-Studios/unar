@@ -86,7 +86,8 @@ jobs:
           "$GCC_PREFIX"strip $BINARY_NAME
 
           ########## create tar.gz ##########
-          RELEASE_NAME=unar-"${GITHUB_REF/refs\/tags\//}"-"${{ matrix.job.os-name }}"-"${{ matrix.job.architecture }}"
+          RELEASE_NAME=unar-$(git describe --abbrev=0)-"${{ matrix.job.os-name }}"-"${{ matrix.job.architecture }}"
+          echo $RELEASE_NAME
           tar -cvf $RELEASE_NAME.tar $BINARY_NAME
           gzip $RELEASE_NAME.tar
 
